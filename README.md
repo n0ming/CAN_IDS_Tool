@@ -27,11 +27,39 @@ TMI: 큐 버퍼 크기를 작게 성정하여 초반에 실제 차량을 테스�
 ## [5] 성능 평가 대상
 ![image](https://github.com/user-attachments/assets/2817fa3d-580a-46b7-aef9-7fb2a7236e0c)
 
-## [6] 설치 방법
-cd rpi-ids/scripts
-./run.sh
+## 🚀 설치 방법 (Installation Guide)
 
-위 명령어를 실행하기 전, rpi-ids/core/header.h에서 연결한 CAN Interface명을 수정해야합니다. 디폴트로 vcan0로 설정되어 있습니다. 
+Raspberry Pi IDS 시스템을 실행하려면 아래 단계를 따라주세요.
+
+### 1️⃣ 스크립트 디렉터리로 이동  
+아래 명령어를 실행하여 `scripts` 디렉터리로 이동하세요.  
+
+```bash
+cd rpi-ids/scripts
+```
+
+### 2️⃣ 실행 스크립트 실행  
+이제 실행 스크립트를 실행하세요.  
+
+```bash
+./run.sh
+```
+
+> 💡 **Tip:** 실행 권한이 없을 경우 아래 명령어를 실행한 후 다시 실행하세요.  
+> ```bash
+> chmod +x run.sh
+> ```
+
+---
+
+### ⚙️ CAN Interface 설정  
+위 명령어를 실행하기 전, `rpi-ids/core/header.h`에서 연결한 **CAN Interface명**을 수정해야 합니다.  
+기본값은 `vcan0`으로 설정되어 있습니다.  
+
 ![image](https://github.com/user-attachments/assets/1e9f9f57-6ea2-47a1-9536-245d8a101286)
 
-또한, 기본적으로 dbc 파일은 내장되어 있기에 컴파일시 사용하고 있는 dbc를 rpi-ids/protocol/dbc.dbc 대신 넣어주세요. dbc의 파일명은 동일하게 진행해주세요. 
+### 📂 DBC 파일 설정  
+기본적으로 **DBC 파일**은 내장되어 있으며,  
+컴파일 시 사용하고 있는 DBC 파일을 `rpi-ids/protocol/dbc.dbc` 대신 넣어주세요.  
+
+📌 **파일명은 동일하게 유지해야 합니다.**
