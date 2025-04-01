@@ -26,3 +26,12 @@ TMI: 큐 버퍼 크기를 작게 성정하여 초반에 실제 차량을 테스�
 
 ## [5] 성능 평가 대상
 ![image](https://github.com/user-attachments/assets/2817fa3d-580a-46b7-aef9-7fb2a7236e0c)
+
+## [6] 설치 방법
+cd rpi-ids/scripts
+./run.sh
+
+위 명령어를 실행하기 전, rpi-ids/core/header.h에서 연결한 CAN Interface명을 수정해야합니다. 디폴트로 vcan0로 설정되어 있습니다. 
+![image](https://github.com/user-attachments/assets/1e9f9f57-6ea2-47a1-9536-245d8a101286)
+
+또한, 기본적으로 dbc 파일은 내장되어 있기에 컴파일시 사용하고 있는 dbc를 rpi-ids/protocol/dbc.dbc 대신 넣어주세요. dbc의 파일명은 동일하게 진행해주세요. 
